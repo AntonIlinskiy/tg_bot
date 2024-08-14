@@ -7,7 +7,7 @@ dp = Dispatcher(bot)
 @dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
     markup = types.ReplyKeyboardMarkup()
-    markup.add(types.KeyboardButton('Открыть веб страницу', web_app=WebAppInfo(url='https://itproger.com')))
+    markup.add(types.KeyboardButton('Открыть веб страницу', web_app=WebAppInfo(url='https://antonilinskiy.github.io/tg_bot/')))
     await message.answer('Привет мой друг!', reply_markup=markup)
 
 executor.start_polling(dp)
