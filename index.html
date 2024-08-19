@@ -6,13 +6,92 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shop</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            color: var(--tg-theme-text-color);
+            background-color: var(--tg-theme-bg-color);
+
+
+        }
+
+        #main {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        h1 {
+            margin-top: 50px;
+            margin-bottom: 10px;
+            color: var(--tg-theme-text-color);
+        }
+
+        img {
+            width: 50px;
+            margin: 0 auto;
+
+        }
+
+        button {
+            border: 0;
+            border-radius: 5px;
+            margin-top: 50px;
+            height: 60px;
+            width: 200px;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: var(--tg-theme-button-color);
+            background: var(--tg-theme-button-text-color);
+
+        }
+
+        button:hover {
+            background: var(--tg-theme-secondary-bg-color);
+
+
+        }
+    </style>
 </head>
 <body>
-    <div id="main">
-        <h1>Онлайн магазин</h1>
-        <img src="https://ru.pngtree.com/freepng/inspiration-running-shoes-vector-icon-sport-shoe-glyph-icon_5270974.html">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button id="buy">Купить</button>
-    </div>
+<div id="main">
+    <h1>Онлайн магазин</h1>
+    <img src="https://w7.pngwing.com/pngs/120/950/png-transparent-shoe-adidas-nike-sneakers-fashion-adidas-leather-fashion-logo.png">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.</p>
+    <button id="buy">Купить</button>
+</div>
+<form id="form">
+    <input type="text" placeholder="Имя" id="user_name">
+    <input type="text" placeholder="Email" id="user_email">
+    <input type="text" placeholder="Телефон" id="user_phone">
+    <button id="order">Оформить</button>
+</form>
+
+
+    <script>
+    let tg = window.Telegram.WebApp;
+    let buy = document.getElementById("buy")
+    let order = document.getElementById("order")
+
+    buy.addEventListener("click", () => {
+        document.getElementById("main").style.display = "none";
+        document.getElementById("form").style.display = "block";
+        document.getElementById("user_name").value = tg.initDataUnsafe.first_name + " " + tg.initDataUnsafe.first_name;
+    });
+    </script>
 </body>
 </html>

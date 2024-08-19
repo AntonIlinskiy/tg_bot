@@ -11,3 +11,4 @@ async def send_welcome(message: types.Message):
     await message.answer('Привет мой друг!', reply_markup=markup)
 
 executor.start_polling(dp)
+
