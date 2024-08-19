@@ -70,8 +70,23 @@
 <div id="main">
     <h1>Онлайн магазин</h1>
     <img src="https://w7.pngwing.com/pngs/120/950/png-transparent-shoe-adidas-nike-sneakers-fashion-adidas-leather-fashion-logo.png">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.</p>
+    <p>Добро пожаловать в наш магазин, где стиль встречает комфорт! Мы предлагаем широкий ассортимент кроссовок и одежды
+        для активных людей, ценящих качество и современные тренды.
+
+        В нашем магазине вы найдете:
+
+        - Кроссовки: от классических моделей до последних новинок от известных брендов. Мы предлагаем обувь для спорта,
+        повседневной носки и стильных выходов.
+
+        - Одежда: разнообразные коллекции для мужчин, женщин и детей. У нас есть всё — от спортивных костюмов и футболок
+        до стильных курток и аксессуаров.
+
+        - Аксессуары: дополните свой образ нашими стильными рюкзаками, шапками и носками.
+
+        Мы гарантируем высокое качество продукции и индивидуальный подход к каждому клиенту. Наши консультанты всегда
+        готовы помочь вам выбрать идеальную пару кроссовок или комплект одежды, который подчеркнёт ваш уникальный стиль.
+
+        Загляните к нам и откройте для себя мир моды и комфорта!</p>
     <button id="buy">Купить</button>
 </div>
 <form id="form">
@@ -82,7 +97,7 @@
 </form>
 
 
-    <script>
+<script>
     let tg = window.Telegram.WebApp;
     let buy = document.getElementById("buy")
     let order = document.getElementById("order")
@@ -92,6 +107,6 @@
         document.getElementById("form").style.display = "block";
         document.getElementById("user_name").value = tg.initDataUnsafe.first_name + " " + tg.initDataUnsafe.first_name;
     });
-    </script>
+</script>
 </body>
 </html>
