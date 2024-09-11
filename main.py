@@ -1,5 +1,6 @@
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types.web_app_info import WebAppInfo
+import json
 
 
 bot = Bot('7357533859:AAGC3ouB_xHJDoRp6lRlMM5GPhbmDJ5HpEU')
@@ -13,7 +14,8 @@ async def send_welcome(message: types.Message):
 
 @dp.message_handler(content_types=['web_app_data'])
 async def web_app(message: types.Message):
-    await message.answer(message.web_app_data.data)
+    res = json.loads(message.web_app_data.data)
+    await message.answer(f'Name: {res["name"]}. Email: {res["email"]}. Phone: {res["phone"]}')
 
 executor.start_polling(dp)
 
