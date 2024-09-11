@@ -19,7 +19,7 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 200;
             color: black;
-            background: aliceblue;
+            background: grey;
         }
 
         #main {
@@ -54,11 +54,30 @@
             cursor: pointer;
             transition: all 500ms ease;
             color: blue;
-            background: brown;
+            background: white;
         }
 
         button:hover {
-            background: chartreuse;
+            background: grey;
+        }
+
+        #form {
+            display: none;
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            outline: none;
+            margin: 10px 5%;
+            padding: 15px 10px;
+            font-size: 14px;
+            border: 2px solid silver;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            border-color: #db5d5d;
         }
     </style>
 </head>
@@ -69,6 +88,12 @@
         <p>Добро пожаловать в наш магазин, где стиль встречает комфорт! Мы предлагаем широкий ассортимент кроссовок и одежды для активных людей, ценящих качество и современные тренды.</p>
         <button id="buy">Купить</button>
     </div>
+    <form id="form">
+        <input type="text" placeholder="Имя" id="user_name">
+        <input type="text" placeholder="Email" id="user_email">
+        <input type="text" placeholder="Телефон" id="user_phone">
+        <button id="order">Оформить</button>
+    </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
 </html>
